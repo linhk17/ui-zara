@@ -1,0 +1,116 @@
+.toast-custom-container {
+  width: fit-content !important;
+
+  .toast-custom {
+    border-radius: 6px;
+    padding: 6px 16px 6px 4px !important;
+    line-height: normal !important;
+
+    .swal2-icon-show {
+      display: none !important;
+    }
+
+    .swal2-title {
+      font-weight: 500 !important;
+      line-height: 20px !important;
+    }
+
+    .swal2-close {
+      font-family: 'Popins';
+    }
+
+    &.swal2-icon-success {
+      background-color: #82D616 !important;
+    }
+
+    &.swal2-icon-error {
+      background-color: #E51919 !important;
+    }
+
+    &.swal2-icon-primary {
+      background-color: $primary !important;
+    }
+
+    &.swal2-icon-dark {
+      background-color: $dark !important;
+    }
+
+    &.swal2-icon-success,
+    &.swal2-icon-error,
+    &.swal2-icon-primary,
+    &.swal2-icon-dark {
+
+      .swal2-title,
+      .swal2-close {
+        color: #fff;
+      }
+    }
+
+    &.swal2-icon-warning {
+      background-color: #F5CC39 !important;
+
+      .swal2-title,
+      .swal2-close {
+        color: #000;
+      }
+    }
+  }
+}
+
+.confirm-custom-container {
+  .swal2-modal {
+    padding: 24px 20px 48px 20px !important;
+  }
+
+  .swal2-popup {
+    width: 650px !important;
+    max-width: 100%;
+  }
+
+  .swal2-info {
+    background-color: transparent;
+    border-color: transparent;
+    color: transparent;
+    background-image: url("/assets/images/icons/info.svg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+
+  .swal2-title {
+    font-size: 24px !important;
+    color: $dark;
+    padding-right: 0 !important;
+    line-height: 36px;
+    margin-bottom: 5px !important;
+  }
+
+  .swal2-html-container {
+    color: $dark;
+    padding: 0 160px !important;
+  }
+
+  .swal2-actions {
+    .btn {
+      text-transform: none !important;
+      margin-bottom: 0;
+      box-shadow: none !important;
+    }
+  }
+
+  .swal2-close{
+    background-image: url("/assets/images/icons/icon-close-modal.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 36px;
+    height: 36px;
+    font-size: 0;
+    box-shadow: none;
+  }
+}
+
+.type-icon{
+  width: 40px;
+  height: 40px;
+}

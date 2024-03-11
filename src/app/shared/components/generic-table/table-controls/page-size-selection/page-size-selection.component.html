@@ -1,0 +1,13 @@
+<div class="d-flex align-items-center">
+  Show&nbsp;
+  <select
+    class="rounded form-control"
+    [(ngModel)]="pageSize"
+    name="pageSize"
+    (change)="changePageSize()"
+    [attr.disabled]="isDisabled ? true : null"
+  >
+    <option *ngFor="let value of options" [value]="value">{{ value }}</option>
+  </select>
+  &nbsp;entries
+</div>

@@ -1,0 +1,16 @@
+<!-- <div class="g-sidenav-{{!isOpenSidebar && !isSmallScreen ? 'hidden' : 'show'}}"
+    [class.g-sidenav-pinned]="isOpenSidebar">
+    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0
+        fixed-start">
+        <app-sidebar></app-sidebar>
+    </aside>
+    <main class="main-content position-relative max-height-vh-100 h-100
+        border-radius-lg">
+        <app-navbar (byToggle)="toggleSidebar()"></app-navbar>
+        <div class="container-fluid py-4">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
+    <app-footer></app-footer>
+</div> -->
+<router-outlet></router-outlet>

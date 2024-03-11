@@ -1,0 +1,17 @@
+<input ngx-gp-autocomplete
+       [options]="configGooglePlaces"
+       [formControl]="control"
+       autocomplete="random-text"
+       class="form-control {{ className }}"
+       [class.is-invalid]="control.invalid && (control.touched || submitted)"
+       [name]="name"
+       (onAddressChange)="handleAddressChange($event)"
+       #placesRef="ngx-places"
+       (input)="resetAddress(placesRef)"
+       [attr.disabled]="isDisabled ? true : null"/>
+<app-form-control-validate
+        [control]="control"
+        [customError]="customError"
+        [name]="errorLabel"
+        [submitted]="submitted"
+></app-form-control-validate>

@@ -1,0 +1,10 @@
+<div class="d-flex align-items-center gap-3">
+  <div class="position-relative {{className}} avatar-shadow-none overflow-hidden" *ngIf="item">
+    <ngx-avatar [name]="item.name"
+      [src]="item.image?.key | mediaLink : isAvatarUser" [size]="size"
+      alt=""></ngx-avatar>
+  </div>
+  <div class="fw-bold text-dark">
+    {{item.name}}
+  </div>
+</div>

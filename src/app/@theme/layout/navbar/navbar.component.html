@@ -1,0 +1,168 @@
+<!-- Navbar -->
+<!-- <button class="btn btn-primary">Primary</button>
+<a class="text-gray-500">Text</a> -->
+<nav class="navbar navbar-main navbar-expand-lg px-0
+	shadow-none" id="navbarBlur"
+	data-scroll="true">
+	<div class="container-fluid px-0">
+		<app-breadcrumbs></app-breadcrumbs>
+		<div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none">
+			<a href="javascript:;" class="nav-link text-body p-0"
+				(click)="toggleSidebar()">
+				<div class="sidenav-toggler-inner">
+					<i class="sidenav-toggler-line"></i>
+					<i class="sidenav-toggler-line"></i>
+					<i class="sidenav-toggler-line"></i>
+				</div>
+			</a>
+		</div>
+		<div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4"
+			id="navbar">
+			<div class="ms-md-auto pe-md-3 d-flex align-items-center">
+				<div class="input-group">
+					<span class="input-group-text text-body"><i class="fas
+							fa-search" aria-hidden="true"></i></span>
+					<input type="text" class="form-control"
+						placeholder="Type here...">
+				</div>
+			</div>
+			<ul class="navbar-nav justify-content-end">
+
+				<li class="nav-item pe-3 d-xl-none d-flex align-items-center">
+					<a href="javascript:;" class="nav-link text-body p-0"
+						id="iconNavbarSidenav"
+						(click)="toggleSidebar()">
+						<div class="sidenav-toggler-inner">
+							<i class="sidenav-toggler-line"></i>
+							<i class="sidenav-toggler-line"></i>
+							<i class="sidenav-toggler-line"></i>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item pe-3 d-flex align-items-center">
+
+					<a href="javascript:;" class="nav-link text-body p-0">
+						<img src="./assets/images/icons/cog.svg" class="cursor-pointer"
+							alt="configure" />
+					</a>
+				</li>
+				<li class="nav-item dropdown pe-3 d-flex align-items-center" dropdown>
+					<a href="javascript:;" dropdownToggle class="nav-link position-relative text-body p-0" id="dropdownMenuButton"
+						data-bs-toggle="dropdown" aria-expanded="false">
+						<img src="./assets/images/icons/bell.svg" class="cursor-pointer" alt="bell" />
+						<span class="badge-notice">9</span>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-end dropdown-menu-notification px-2 py-3
+						me-sm-n4" aria-labelledby="dropdownMenuButton" *dropdownMenu>
+						<div class="header-menu px-2 d-flex justify-content-between border-bottom">
+							<h6>Notification</h6>
+							<div class="text-primary">
+								Read all
+							</div>
+						</div>
+						<div class="scroll-menu">
+							<li class="mt-0">
+								<a class="dropdown-item p-2 border-radius-md" href="javascript:;">
+									<div class="d-flex justify-content-between align-items-start">
+										<div class="d-flex">
+											<div class="my-auto">
+												<app-avatar className="avatar-shadow-none me-3" [user]="{
+												avatar: {
+													url: './assets/images/avatars/avatar-lg.png'
+												}
+											}"></app-avatar>
+											</div>
+											<div class="d-flex flex-column
+											justify-content-center">
+												<h6 class="text-sm font-weight-bold
+												mb-1">
+													Customer Name
+												</h6>
+												<p class="text-xs text-light-dark mb-0">
+													Mr D has booked your service
+												</p>
+											</div>
+										</div>
+										<img class="h-fit-content" src="./assets/images/icons/dot-only.svg" />
+									</div>
+									<p class="text-xs text-primary mb-0 mt-1 text-end">
+										{{date | datetime: 'DD-MM-YYYY HH:mm '}}
+									</p>
+								</a>
+							</li>
+							<li class="mt-2">
+								<a class="dropdown-item p-2 border-radius-md" href="javascript:;">
+									<div class="d-flex justify-content-between align-items-start">
+										<div class="d-flex">
+											<div class="d-flex flex-column
+											justify-content-center">
+												<h6 class="text-sm text-wrap font-weight-bold
+												mb-1">
+													Booking ID 1003293 has been completed
+												</h6>
+												<p class="text-xs text-light-dark mb-0 text-wrap">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+													labore et dolore magna aliqua.
+												</p>
+											</div>
+										</div>
+										<img class="h-fit-content" src="./assets/images/icons/dot-only.svg" />
+									</div>
+									<p class="text-xs text-primary mb-0 mt-1 text-end">
+										{{date | datetime: 'DD-MM-YYYY HH:mm '}}
+									</p>
+								</a>
+							</li>
+							<li class="mt-2" *ngFor="let item of [].constructor(5); let i = index">
+								<a class="dropdown-item p-2 border-radius-md" href="javascript:;">
+									<div class="d-flex justify-content-between align-items-start">
+										<div class="d-flex">
+											<div class="my-auto">
+												<app-avatar className="avatar-shadow-none me-3" [user]="{
+													avatar: {
+														url: './assets/images/avatars/avatar-lg.png'
+													}
+											}"></app-avatar>
+											</div>
+											<div class="d-flex flex-column
+											justify-content-center">
+												<h6 class="text-sm font-weight-bold
+												mb-1">
+													Customer Name
+												</h6>
+												<p class="text-xs text-light-dark mb-0">
+													Mr D has booked your service
+												</p>
+											</div>
+										</div>
+										<img class="h-fit-content" src="./assets/images/icons/dot-only.svg" />
+									</div>
+									<p class="text-xs text-primary mb-0 mt-1 text-end">
+										{{date | datetime: 'DD-MM-YYYY HH:mm '}}
+									</p>
+								</a>
+							</li>
+						</div>
+					</ul>
+				</li>
+				<li class="nav-item dropdown pe-3 d-flex align-items-center" dropdown>
+					<a href="javascript:;" dropdownToggle class="nav-link position-relative text-body p-0"
+						id="dropdownMenuUser" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						<app-avatar [user]="user"></app-avatar>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-avt dropdown-menu-end px-2 py-3
+						me-sm-n4" aria-labelledby="dropdownMenuUser" *dropdownMenu>
+						<li (click)="openModal()" class="dropdown-item border-radius-md">
+							Change Password
+						</li>
+						<li class="dropdown-item border-radius-md" (click)="logout()">
+								Log out
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<!-- End Navbar -->

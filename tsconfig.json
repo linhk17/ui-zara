@@ -1,0 +1,72 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es6",
+    "module": "es2020",
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "paths": {
+      "@env/*": [
+        "src/environments/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@shared/*": [
+        "src/app/shared/*"
+      ],
+      "@constant/*": [
+        "src/app/@core/constant/*"
+      ],
+      "@enum/*": [
+        "src/app/@core/enum/*"
+      ],
+      "@guard/*": [
+        "src/app/@core/guard/*"
+      ],
+      "@interceptors/*": [
+        "src/app/@core/interceptors/*"
+      ],
+      "@interfaces/*": [
+        "src/app/@core/interfaces/*"
+      ],
+      "@services/*": [
+        "src/app/@core/services/*"
+      ],
+      "@utils/*": [
+        "src/app/@core/utils/*"
+      ],
+      "@list-defination/*": [
+        "src/app/@core/list-defination/*"
+      ]
+    },
+    "useDefineForClassFields": false
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true,
+		"skipLibCheck": true,
+    "noImplicitReturns": false
+  }
+}

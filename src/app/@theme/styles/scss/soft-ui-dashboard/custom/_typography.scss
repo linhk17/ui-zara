@@ -1,0 +1,43 @@
+.h1,
+h1 {
+  letter-spacing: -1.328px;
+}
+.h2,
+h2 {
+  letter-spacing: -0.996px;
+}
+.h3,
+h2 {
+  letter-spacing: -0.83px;
+}
+.h4,
+h2 {
+  letter-spacing: -0.664px;
+}
+.h5,
+h2 {
+  letter-spacing: -0.553px;
+}
+.h6,
+h6 {
+  letter-spacing: -0.443px;
+}
+.text-sm, .text-xs {
+  letter-spacing: -0.387px;
+}
+
+.text {
+  &-open-sans {
+    font-family: $font-family-open-sans;
+  }
+  &-inter {
+    font-family: $font-family-inter;
+  }
+  &-poppins {
+    font-family: $font-family-poppins;
+  }
+}
+
+body {
+  @include body-text;
+}

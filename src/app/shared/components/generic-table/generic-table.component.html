@@ -1,0 +1,71 @@
+<div class="table-responsive">
+	<table width="100%" class="table {{ className }}">
+		<thead *ngIf="!hideColumnHeader">
+			<ng-container *ngFor="let tableData of objectKeys(columnHeader)">
+				<ng-container [ngSwitch]="tableData">
+					<ng-container *ngSwitchDefault>
+						<th (click)="sortBy(tableData)" [class.cursor-pointer]="columnHeader[tableData].sort" class="text-{{
+								columnHeader[tableData].align || 'left' }}" [width]="columnHeader[tableData].width">
+							{{ columnHeader[tableData].title }}
+
+							<ng-container *ngIf="columnHeader[tableData].sort">
+								&nbsp;
+								<i class="fa {{
+										sort[tableData] === undefined
+										? 'fa-sort'
+										: sort[tableData] === 'asc'
+										? 'fa-sort-up'
+										: 'fa-sort-down'
+										}}"></i>
+							</ng-container>
+						</th>
+					</ng-container>
+
+					<ng-container *ngSwitchCase="'action'">
+						<th class="text-{{ columnHeader[tableData].align || 'start' }}">
+							{{ columnHeader[tableData].title }}
+						</th>
+					</ng-container>
+				</ng-container>
+			</ng-container>
+		</thead>
+
+
+		<!-- Row shown when there is no matching data. -->
+		<tbody>
+			<tr *ngIf="totalItems === 0">
+				<td [attr.colspan]="objectKeys(columnHeader).length" align="center">
+					No data found
+				</td>
+			</tr>
+			<ng-content></ng-content>
+		</tbody>
+	</table>
+</div>
+<div class="d-flex justify-content-center flex-wrap align-items-center mt-2" *ngIf="totalItems> 0 &&
+		!hidePaginate">
+	<pagination-template class="ngx-pagination custom-pagination" #p="paginationApi"
+		(pageChange)="page= $event; emitPage()" previousLabel="" nextLabel="" [id]="id">
+
+		<div class="pagination-previous" (click)="p.previous()" [class.disabled]="p.isFirstPage()">
+			<a>
+				<img src="./assets/images/icons/chevron-left.svg" />
+			</a>
+		</div>
+		<li *ngFor="let page of p.pages" [class.current]="p.getCurrent() ===
+				page.value" (click)="p.setCurrent(page.value)">
+			<a *ngIf="p.getCurrent() !==
+					page.value">
+				<span>{{ page.label }}</span>
+			</a>
+			<div *ngIf="p.getCurrent() === page.value">
+				<span>{{ page.label }}</span>
+			</div>
+		</li>
+		<div class="pagination-next" (click)="p.next()" [class.disabled]="p.isLastPage()">
+			<a>
+				<img src="./assets/images/icons/chevron-right.svg" />
+			</a>
+		</div>
+	</pagination-template>
+</div>

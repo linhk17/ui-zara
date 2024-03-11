@@ -1,0 +1,9 @@
+textarea {
+  &.form-control {
+    min-height: 8.75rem;
+  }
+  &.form-control-sm {
+    font-size: $input-font-size;
+    min-height: 5.438rem;
+  }
+}

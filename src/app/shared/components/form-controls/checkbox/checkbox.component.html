@@ -1,0 +1,18 @@
+<div class="form-check" [class.form-switch]="isSwitch">
+  <input
+    type="checkbox"
+    class="form-check-input"
+    [id]="inputId"
+    [class.is-invalid]="control.invalid && (control.touched || submitted)"
+    [name]="name"
+    [formControl]="control"
+    [attr.disabled]="isDisabled ? true : null"
+    />
+  <label class="custom-control-label ms-2 {{classNameLabel}}" [for]="inputId">{{ label }}</label>
+</div>
+
+<app-form-control-validate
+  [control]="control"
+  [customError]="customError"
+  [name]="errorLabel || label"
+  [submitted]="submitted"></app-form-control-validate>

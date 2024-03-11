@@ -1,0 +1,5 @@
+<div class="position-relative {{className}}" *ngIf="user">
+	<ngx-avatar [name]="user.firstName + ' ' + user.lastName" [src]="user.avatar?.url"
+		[size]="size">
+	</ngx-avatar>
+</div>

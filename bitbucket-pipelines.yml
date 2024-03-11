@@ -1,0 +1,26 @@
+image: node:16.14.0
+
+pipelines:
+  branches:
+    Dev:
+      - step:
+          name: Installation
+          caches:
+            - node
+          script:
+            - npm install
+          artifacts:
+            - node_modules/** # Save modules for next steps
+      - step:
+          name: Build Dev
+          script:
+            - npm run build
+          artifacts:
+            - dist/** # Save build for next steps
+
+      - step:
+          image: atlassian/pipelines-awscli
+          name: Deploy Dev
+          script:
+            - aws s3 sync --delete dist/digidoc-portal s3://digidocs-portal-dev
+            - aws cloudfront create-invalidation --distribution-id E32PX5N1D0A42D --paths "/*"

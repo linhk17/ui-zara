@@ -1,0 +1,31 @@
+<div class="mb-3">
+	<h2 class="text-primary">Sign In</h2>
+	<p class="text-light-d fs-5">Enter your email and password to sign in</p>
+	<form [formGroup]="form" (ngSubmit)="onSubmit()">
+		<app-form-group [groupClassName]="'mb-5'" title="Email"
+			[isRequired]="true">
+			<app-text-input [submitted]="submitted" formControlName="email"
+				errorLabel="Email" inputType="email" placeHolder="Email"></app-text-input>
+		</app-form-group>
+		<app-form-group [groupClassName]="'mb-5'" title="Password"
+			[isRequired]="true">
+			<app-text-input [submitted]="submitted" formControlName="password"
+				[inputType]="'password'" errorLabel="Password"
+				placeHolder="Password"></app-text-input>
+		</app-form-group>
+		<app-form-group [groupClassName]="'mb-5'">
+			<app-checkbox formControlName="remember_me" label="Remember me"
+				[isSwitch]="true"></app-checkbox>
+		</app-form-group>
+		<app-button
+			className="w-100 d-flex justify-content-center btn-primary"
+			[isLoading]="isLoading"
+			[isDisabled]="isLoading"
+			[type]="'submit'">
+			Sign In</app-button>
+		<div class="text-center mt-2">
+			<a routerLink="/auth/forgot-password" class="text-info text-sm
+				fw-semibold">Forgot password?</a>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,87 @@
+<ng-container *ngIf="control">
+	<!-- <ng-container *ngIf="customError; else defaultMessage"> -->
+	<ng-container *ngIf="customError">
+		<ng-container *ngFor="let item of
+			customError">
+			<div [class]="errorClassName"
+				*ngIf="control.errors?.[item?.error!] && (control.touched ||
+				control.dirty || submitted) && item?.message">
+				<p>
+					{{ item.message }}
+				</p>
+			</div>
+		</ng-container>
+	</ng-container>
+
+
+	<!-- </ng-container>
+  <ng-template #defaultMessage> -->
+	<ng-container
+		*ngIf="(control.touched || control.dirty || submitted) && control.errors">
+		<div [class]="errorClassName" *ngIf="control.errors?.['required'] &&
+			!checkKey('required')">
+			{{ name }} is required
+		</div>
+		<div [class]="errorClassName" *ngIf="control.errors?.['email'] &&
+			!checkKey('email')">
+			Please enter a valid {{ name }}
+		</div>
+		<div [class]="errorClassName" *ngIf="control.errors?.['pattern'] &&
+			!checkKey('pattern')">
+			Please enter a valid {{ name }}
+		</div>
+		<div [class]="errorClassName" *ngIf="control.errors?.['minlength'] &&
+			!checkKey('minlength')">
+			{{ name }} must be less than
+			{{ control.errors['minlength'].requiredLength }} character.
+		</div>
+		<div [class]="errorClassName" *ngIf="control.errors?.['maxlength'] &&
+			!checkKey('maxlength')">
+			{{ name }} must be at least
+			{{ control.errors['maxlength']?.requiredLength }} character.
+		</div>
+		<div [class]="errorClassName" *ngIf="control.errors?.['min'] &&
+			!checkKey('min')">
+			{{ name }} must be equal or greater than
+			{{ control.errors['min']?.min }}.
+		</div>
+		<div [class]="errorClassName" *ngIf="control.errors?.['max'] &&
+			!checkKey('max')">
+			{{ name }} must be equal or less than
+			{{ control.errors['max']?.max }}.
+		</div>
+		<div [class]="errorClassName" *ngIf="control.errors?.['mustMatch'] &&
+			!checkKey('mustMatch')">
+			{{ control.errors['mustMatch']?.controlLabel }} and {{ name }} does not
+			match
+		</div>
+		<div [class]="errorClassName"
+			*ngIf="control.errors?.['validateAge'] &&
+			!control.errors?.['validateAge']?.valid">
+			{{ control.errors['validateAge']?.errorMessage }}
+		</div>
+		<div [class]="errorClassName"
+			*ngIf="control.errors?.['validatePhoneNumber'] &&
+			!control.errors['validatePhoneNumber']?.valid">
+			{{ name }} is invalid
+		</div>
+		<div [class]="errorClassName"
+			*ngIf="control.errors?.['owlDateTimeMin'] &&
+			!checkKey('owlDateTimeMin')">
+			Please select the end time after the start time
+		</div>
+		<div [class]="errorClassName"
+			*ngIf="control.errors['whitespace']">
+			{{ name }} can not be blank
+		</div>
+		<div [class]="errorClassName"
+			*ngIf="control.errors['whitespace']">
+			{{ name }} can not be blank
+		</div>
+		<div [class]="errorClassName"
+			*ngIf="control.errors['isExist']">
+			{{ name }} is existed
+		</div>
+	</ng-container>
+	<!-- </ng-template> -->
+</ng-container>

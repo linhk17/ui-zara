@@ -1,0 +1,51 @@
+@mixin font-size-variant(
+  $font-size,
+  $line-height,
+  $font-weight,
+  $letter-spacing: unset
+) {
+  font-weight: $font-weight !important;
+  font-size: $font-size !important;
+  letter-spacing: $letter-spacing !important;
+  line-height: $line-height !important;
+}
+
+@mixin text-ellipsis($line: null) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if $line {
+    -webkit-line-clamp: $line;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+  }
+}
+
+@mixin heading-1 {
+  @include font-size-variant($h1-font-size, normal, normal, -1.328px);
+}
+
+@mixin heading-2 {
+  @include font-size-variant($h2-font-size, normal, normal, -0.996px);
+}
+
+@mixin heading-3 {
+  @include font-size-variant($h3-font-size, normal, normal, -0.83px);
+}
+
+@mixin heading-4 {
+  @include font-size-variant($h4-font-size, normal, normal, -0.664px);
+}
+
+@mixin heading-5 {
+  @include font-size-variant($h5-font-size, normal, normal, -0.553px);
+}
+
+@mixin heading-6 {
+  @include font-size-variant($h6-font-size, normal, normal, -0.443px);
+}
+
+@mixin body-text {
+  @include font-size-variant($font-size-sm, normal, normal, -0.387px);
+}

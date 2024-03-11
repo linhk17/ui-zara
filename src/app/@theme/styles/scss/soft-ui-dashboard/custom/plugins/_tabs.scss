@@ -1,0 +1,32 @@
+.tab-container {
+  .nav.nav-pills{
+    border-bottom: 1px solid #D2D6DA;
+    border-radius: 0;
+    .nav-link{
+      padding-left: 0;
+      padding-right: 10px;
+      padding-top: 0;
+    }
+    .nav-item {
+      .btn {
+        padding: 10px 20px;
+        font-weight: 600;
+        line-height: 21px;
+        box-shadow: none;
+        color: $light-dark;
+      }
+      &.active{
+        .btn{
+          background-color: $dark;
+          color: $white;
+          box-shadow: $btn-active-box-shadow;
+        }
+      }
+    }
+  }
+}
+.tab-container.border-none{
+  .nav.nav-pills{
+    border-bottom: 0 !important;
+  }
+}

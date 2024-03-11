@@ -1,0 +1,21 @@
+@import "./variables";
+@import "./utilities";
+@import "./mixins";
+@import "./typography";
+
+// Core Components - extra styling
+@import "./buttons";
+@import "./forms";
+@import "./modal";
+@import "./breadcrumbs";
+@import "./tables";
+@import "./plugins";
+@import "./navbar-vertical";
+@import "./navbar";
+@import "./badge";
+@import "./filter";
+@import "./dropdown";
+
+body {
+  background: #f6f6f6;
+}

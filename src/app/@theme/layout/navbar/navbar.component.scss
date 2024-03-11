@@ -1,0 +1,25 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/variables";
+@import "scss/soft-ui-dashboard/custom/variables";
+
+.badge-notice {
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  min-width: 12px;
+  min-height: 12px;
+  max-width: 20px;
+  max-height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-family-open-sans;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.249px;
+  background-color: #f5222d;
+  color: $white;
+}

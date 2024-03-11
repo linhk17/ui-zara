@@ -1,0 +1,23 @@
+.toggle-password {
+  position: absolute;
+  top: 24%;
+  transition: all 0.25s;
+}
+
+.form-control.is-password {
+  transition: padding-right 0.2s;
+  // &:not(.is-invalid) {
+  //   padding-right: calc(1.5em + 2.2rem) !important;
+  //   + .toggle-password {
+  //     right: calc(0.375em + 0.1875rem) !important;
+  //   }
+  // }
+  &.is-invalid {
+    padding-right: calc(1.5em + 0.75rem) !important;
+    + .toggle-password {
+      right: 2.2rem;
+    }
+  }
+}
+
+

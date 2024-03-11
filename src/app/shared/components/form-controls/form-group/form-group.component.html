@@ -1,0 +1,10 @@
+<div class="form-group {{ groupClassName }}">
+    <app-form-control-label
+            *ngIf="title"
+            [isRequired]="isRequired"
+            [title]="title"
+            [className]="labelClassName">
+        <ng-content select="label"></ng-content>
+    </app-form-control-label>
+    <ng-content></ng-content>
+</div>

@@ -1,0 +1,18 @@
+.breadcrumb {
+  padding: 0;
+  .breadcrumb-item {
+    opacity: 0.4993;
+    font-family: $font-family-open-sans;
+    @include body-text;
+    &.active {
+      color: $dark !important;
+    }
+    &.active,
+    &:hover {
+      opacity: 1;
+      a {
+        color: $dark;
+      }
+    }
+  }
+}

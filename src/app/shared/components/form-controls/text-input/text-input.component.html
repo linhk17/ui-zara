@@ -1,0 +1,44 @@
+<div class="position-relative {{wrapperClass}}"
+    [class.input-group]="isInputGroup"
+    [class.disabled]="isDisabled"
+    [class.is-invalid]="control.invalid && (control.touched || submitted)"
+    [class.is-focus]="isFocus">
+    <ng-content select="[prependText]"></ng-content>
+    <input
+        class="{{isSmall ? 'form-control-sm' : ''}} form-control {{ className
+        }}"
+        [class.is-invalid]="control.invalid && (control.touched || submitted)"
+        [class.is-password]="inputType === 'password'"
+        [class.empty]="!control.value"
+        [formControl]="control"
+        [placeholder]="placeHolder"
+        [type]="isShowPassword && inputType === 'password' ? 'text' : inputType"
+        [attr.disabled]="isDisabled ? true : null"
+        (focus)="isFocus= true"
+        (focusout)="isFocus= false"
+        role="presentation"
+        autocomplete="new-password"
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false"
+        [mask]="configMaskValue?.mask"
+        [suffix]="configMaskValue?.suffix ? configMaskValue?.suffix : ''"
+        [prefix]="configMaskValue?.prefix ? configMaskValue?.prefix : ''"
+        [thousandSeparator]="configMaskValue?.thousandSeparator"
+        />
+    <ng-content select="[appendText]"></ng-content>
+    <div
+        *ngIf="inputType === 'password'"
+        class="icon icon_password toggle-password"
+        [class.icon_password--is-active]="isShowPassword"
+        (click)="isShowPassword= !isShowPassword"
+        role="button">
+        <i class="feather icon-eye{{isShowPassword ? '-off': ''}}"></i>
+    </div>
+</div>
+<app-form-control-validate *ngIf="!hideErrorLabel"
+    [control]="control"
+    [customError]="customError"
+    [name]="errorLabel"
+    [submitted]="submitted">
+</app-form-control-validate>

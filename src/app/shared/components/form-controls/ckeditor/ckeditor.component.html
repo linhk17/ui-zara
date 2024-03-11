@@ -1,0 +1,14 @@
+<ckeditor
+  id="editor"
+  [config]="config" 
+  [editor]="Editor"
+  [formControl]="control"
+  (ready)="onReady($event)"
+  [attr.disabled]="isDisabled ? true : null"
+></ckeditor>
+<app-form-control-validate
+  [customError]="customError"
+  [control]="control"
+  [name]="errorLabel"
+  [submitted]="submitted"
+></app-form-control-validate>

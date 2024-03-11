@@ -1,0 +1,21 @@
+.form-check:not(.form-switch) .form-check-input{
+  &[type="radio"] {
+    &:checked {
+      padding: 6.5px;
+    }
+  }
+}
+.form-switch{
+  display: flex;
+  align-items: center;
+  .form-check-input{
+    &:checked{
+      background-image: $form-check-input-checked-bg-image;
+    }
+  }
+  .custom-control-label{
+    font-weight: 400;
+    font-size: $input-font-size;
+    margin-bottom: 0;
+  }
+}

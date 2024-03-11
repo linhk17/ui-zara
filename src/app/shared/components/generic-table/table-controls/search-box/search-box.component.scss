@@ -1,0 +1,21 @@
+.search {
+  &-box {
+    position: relative;
+  }
+  &-icon {
+    position: absolute;
+    top: 24%;
+    right: 0.75rem;
+  }
+  &-input {
+    padding-right: 2rem;
+    &:hover,
+    &:focus {
+      outline: none;
+      box-shadow: none !important;
+    }
+    &.form-control-sm + .search-icon {
+      top: 17%;
+    }
+  }
+}

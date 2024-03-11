@@ -1,0 +1,21 @@
+<div>
+    <ngx-intl-tel-input
+            [cssClass]="'form-control ' + className"
+            [enableAutoCountrySelect]="true"
+            [enablePlaceholder]="true"
+            [searchCountryFlag]="true"
+            [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+            [selectFirstCountry]="false"
+            [selectedCountryISO]="selectedCountryISO"
+            [maxLength]="15"
+            [phoneValidation]="true"
+            [separateDialCode]="separateDialCode"
+            [numberFormat]="PhoneNumberFormat.National"
+            [formControl]="control">
+    </ngx-intl-tel-input>
+</div>
+<app-form-control-validate
+        [control]="control"
+        [name]="errorLabel"
+        [submitted]="submitted"
+></app-form-control-validate>

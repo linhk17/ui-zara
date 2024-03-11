@@ -1,0 +1,39 @@
+
+<div class="collapse navbar-collapse w-auto h-auto h-100"
+	id="sidenav-collapse-main">
+	<ul class="navbar-nav">
+		<ng-container *ngFor="let item of menu">
+			<li class="nav-item" *appIsGranted="item.permission">
+			<!-- <li class="nav-item"> -->
+				<a class="nav-link" [class.active]="rla?.isActive"
+					routerLinkActive="router-link-active"
+					[routerLink]="[item?.link]" #rla="routerLinkActive">
+					<div class="icon icon-shape icon-sm shadow border-radius-md
+						bg-white text-center me-2 d-flex align-items-center
+						justify-content-center">
+						<img [alt]="item?.title"
+							src="./assets/images/icons/{{item?.icon}}{{rla?.isActive
+							? '-active' : ''}}.svg" />
+					</div>
+					<span class="nav-link-text ms-1">{{item?.title}}</span>
+				</a>
+			</li>
+		</ng-container>
+		<li class="nav-item" (click)="logout()">
+			<a class="nav-link">
+				<div class="icon icon-shape icon-sm shadow border-radius-md
+					bg-white text-center me-2 d-flex align-items-center
+					justify-content-center">
+					<img [alt]="'logout'"
+						src="./assets/images/icons/log-out.svg" />
+				</div>
+				<span class="nav-link-text ms-1">Log out</span>
+			</a>
+		</li>
+	</ul>
+</div>
+
+<div class="sidenav-footer mx-3 mt-3 mb-7 d-flex justify-content-center">
+	<img class="img-fluid" alt="digidoc-logo" src="./assets/images/digidoc.svg"
+		/>
+</div>

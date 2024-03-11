@@ -1,0 +1,46 @@
+.table {
+  margin: 0;
+  thead {
+    th {
+      padding: 0.688rem 1.313rem;
+      font-weight: 600 !important;
+      &:first-child{
+        padding-left: 0;
+      }
+    }
+  }
+
+  th,
+  td {
+    color: $font-color;
+    font-family: $font-family-monospace;
+    @include body-text;
+  }
+
+  tbody {
+    tr {
+      cursor: pointer;
+      &:hover{
+        background-color: rgba(74, 161, 154, 0.05);
+      }
+      td {
+        padding: 1rem 1.313rem;
+        vertical-align: middle;
+        &:first-child{
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  > :not(:first-child) {
+    border-top: unset !important;
+  }
+
+  .btn-table {
+    display: flex;
+    align-items: center;
+    .btn-table-item + .btn-table-item {
+      margin-left: 0.625rem; // 10px
+    }
+  }
+}

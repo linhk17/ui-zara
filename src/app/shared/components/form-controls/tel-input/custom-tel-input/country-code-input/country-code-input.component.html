@@ -1,0 +1,19 @@
+<div class="min-w-120">
+    <ng-select
+            [class.is-invalid]="control.invalid && (control.touched || submitted)"
+            [formControl]="control"
+            [items]="countryCodes"
+            bindLabel="code"
+            bindValue="dialCode"
+            [clearable]="false"
+            appendTo="body"
+            (change)="byChange.emit($event.format)"
+            [readonly]="isDisabled">
+        <ng-template ng-label-tmp let-item="item">
+            <span>{{ '(' + item.dialCode + ')' + ' ' + item.code }}</span>
+        </ng-template>
+        <ng-template ng-option-tmp let-item="item">
+            <span>{{ '(' + item.dialCode + ')' + ' ' + item.code }}</span>
+        </ng-template>
+    </ng-select>
+</div>

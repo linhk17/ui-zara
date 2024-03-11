@@ -1,0 +1,12 @@
+<div class="flex-grow-1">
+    <input class="form-control" type="tel"
+           [class.is-invalid]="control.invalid && (control.touched || submitted)"
+           [attr.disabled]="isDisabled ? true : null"
+           [formControl]="control"
+           [placeholder]="placeHolder"
+           oninput="this.value= this.value.replace(/[^0-9+]/g, '').replace(/(\..*)\./g, '$1');"/>
+</div>
+<app-form-control-validate
+        [control]="control"
+        [name]="errorLabel"
+        [submitted]="submitted"></app-form-control-validate>

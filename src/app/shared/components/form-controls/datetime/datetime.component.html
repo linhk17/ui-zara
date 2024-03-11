@@ -1,0 +1,32 @@
+<div class="position-relative">
+  <input
+  class="form-control {{ className }} form-control-datetime"
+  [class.is-invalid]="control.invalid && (control.touched || submitted)"
+  [owlDateTimeTrigger]="dtCalendar"
+  [owlDateTime]="dtCalendar"
+  [formControl]="control"
+  [name]="name"
+  [placeholder]="placeHolder"
+  onkeydown="return false;"
+  [max]="configDateTimePicker?.maxDate || false"
+  [min]="configDateTimePicker?.minDate || false"
+  [selectMode]="configDateTimePicker?.selectMode || 'single'"
+  [attr.disabled]="isDisabled ? true : null"
+  role="presentation"
+  autocomplete="off"
+  (dateTimeChange)="onChange($event)"
+  />
+  <div [owlDateTimeTrigger]="dtCalendar" class="d-flex">
+    <span *ngIf="isChangeValue" (click)="clear()" class="icon-trigger icon-trigger-clear">×</span>
+    <img class="icon-trigger"  src="assets/images/icons/calendar.svg"/>
+  </div>
+<owl-date-time
+  [startAt]="configDateTimePicker?.startAt!"
+  [pickerType]="configDateTimePicker?.pickerType || 'both'"
+  #dtCalendar></owl-date-time>
+</div>
+<app-form-control-validate
+[control]="control"
+[customError]="customError"
+[name]="errorLabel"
+[submitted]="submitted"></app-form-control-validate>

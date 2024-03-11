@@ -1,0 +1,13 @@
+<div class="search-box input-group {{ boxClassName }}">
+  <span class="text-light-dark input-group-text cursor-pointer"
+    (click)="search()"><i
+      class="fs-6 fas
+      fa-search" aria-hidden="true"></i></span>
+  <input
+    id="search-input"
+    class="form-control search-input {{ controlClassName }}"
+    [formControl]="control"
+    [placeholder]="placeHolder"
+    (keyup.enter)="search()"
+    />
+</div>

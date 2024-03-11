@@ -1,0 +1,70 @@
+<ng-select
+	*ngIf="configMultiSelect"
+	class="custom-ng-select {{className}}"
+	[class.is-invalid]="control.invalid && (control.touched || submitted)"
+	[formControl]="control"
+	[items]="configMultiSelect.items!"
+	[multiple]="configMultiSelect.multiple!"
+	[bindLabel]="configMultiSelect.bindLabel!"
+	[bindValue]="configMultiSelect.bindValue!"
+	[clearable]="configMultiSelect.clearable!"
+	[appendTo]="configMultiSelect.appendTo!"
+	[addTag]="configMultiSelect.addTag!"
+	[hideSelected]="configMultiSelect.isHideSelected!"
+	[closeOnSelect]="isCloseOnSelect!"
+	[loading]="loading"
+	[placeholder]="placeHolder"
+	[attr.disabled]="isDisabled ? true : null"
+	(open)="onOpen()"
+	(close)="onClose()"
+	(change)="onChange($event)"
+	(scrollToEnd)="scrollToEnd($event)"
+	(clear)="clear()"
+	(search)="search($event)"
+	(blur)="blur($event)">
+	<!--Header-->
+	<ng-container *ngIf="configMultiSelect.isCustomHeader">
+		<ng-template ng-header-tmp>
+			<ng-template
+				[ngTemplateOutlet]="templateHeader!"></ng-template>
+		</ng-template>
+	</ng-container>
+	<!--Label-->
+	<ng-container *ngIf="configMultiSelect.isCustomLabel">
+
+		<ng-template ng-label-tmp let-item="item" let-clear="clear">
+			<ng-template
+				[ngTemplateOutlet]="templateLabel!"
+				[ngTemplateOutletContext]="{ item: item, clear: clear }"></ng-template>
+		</ng-template>
+	</ng-container>
+	<!--Options-->
+	<ng-container *ngIf="configMultiSelect.isCustomOption">
+		<ng-template ng-option-tmp let-item="item">
+			<ng-template
+				[ngTemplateOutlet]="templateOption!"
+				[ngTemplateOutletContext]="{ item: item }"></ng-template>
+		</ng-template>
+	</ng-container>
+	<!--Footer-->
+	<ng-container *ngIf="configMultiSelect?.isCustomFooter;">
+		<ng-template ng-footer-tmp>
+			<ng-template
+				[ngTemplateOutlet]="templateFooter!"></ng-template>
+		</ng-template>
+	</ng-container>
+	<!--Multiple Label-->
+	<ng-container *ngIf="configMultiSelect?.isCustomMultipleLabel;">
+		<ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+			<ng-template
+				[ngTemplateOutlet]="templateMultipleLabel!" 
+				[ngTemplateOutletContext]="{ items: items, clear: clear }"></ng-template>
+	</ng-template>
+	</ng-container>
+	
+</ng-select>
+<app-form-control-validate
+	[control]="control"
+	[customError]="customError"
+	[name]="errorLabel"
+	[submitted]="submitted"></app-form-control-validate>

@@ -1,0 +1,73 @@
+.btn {
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  letter-spacing: $btn-letter-spacing;
+  border: $btn-border-width solid transparent;
+  text-transform: none;
+  transition: $btn-transition;
+
+    &:not([class*="btn-outline-"]) {
+      border: 0;
+    }
+
+    &.btn-icon {
+      padding: $btn-icon-padding-y $btn-icon-padding-x;
+  }
+  &:active,
+  &:active:focus,
+  &:active:hover {
+    box-shadow: $btn-active-box-shadow;
+    transform: $btn-active-hover-transform;
+    opacity: $btn-active-opacity;
+  }
+
+  &:hover {
+    box-shadow: $btn-hover-box-shadow;
+    transform: $btn-hover-transform;
+    opacity: $btn-hover-opacity;
+  }
+}
+
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    background-color: transparent;
+    box-shadow: none;
+    color: $value;
+    border: $btn-border-width solid $value;
+
+    @include hover {
+      &:not(.active) {
+        transform: $btn-outline-transform;
+      }              
+    }
+}         
+}
+
+.btn-outline-gray-dark{
+  border: $btn-border-width solid #D2D6DA;
+  color: $dark;
+  box-shadow: none;
+  background-color: $white;
+  font-weight: $font-weight-semibold;
+  &:hover{
+    box-shadow: none !important;
+  }
+}
+
+
+
+@each $color, $value in $btn-font-colors {
+  .btn-#{$color} {
+    color: $value;
+
+    &:hover {
+       color: $value;
+    }
+    &:disabled{
+      color: $value;
+      opacity: 0.7;
+    }
+}
+}

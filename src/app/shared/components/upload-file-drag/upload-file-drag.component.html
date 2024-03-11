@@ -1,0 +1,15 @@
+<ngx-file-drop class="{{className}}" dropZoneLabel="Drop files here" (onFileDrop)="dropped($event)"
+    (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+    <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+      <div class="text-center w-100" (click)="openFileSelector()">
+        <img src="assets/images/icons/upload.svg"/>
+        <div class="text-secondary fw-semibold mt-1">
+          Upload Image
+        </div>
+      </div>
+    </ng-template>
+</ngx-file-drop>
+
+<div *ngIf="submitted && !imageSrc" class="text-xs invalid-feedback d-block">
+  {{errorLabel}} is required
+</div>

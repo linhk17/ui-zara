@@ -1,0 +1,22 @@
+<div class="{{ wrapperClassName }}">
+  <div class="form-check {{ controlClassName }}"
+    [class.ml-2]="objectKeys(options).length!> 1 && i > 0"
+    *ngFor="let key of objectKeys(options); let i = index">
+    <label class="form-check-label" [for]="name + '-' + key">
+      <input type="radio" class="form-check-input" [id]="name + '-' + key"
+        [class.is-invalid]="control.invalid && (control.touched || submitted)"
+        [name]="name" [value]="key"
+        [formControl]="control" [attr.disabled]="isDisabled ? true : null" />
+      <span class="ms-2">
+        {{
+        options[key]
+        }}
+      </span>
+    </label>
+
+
+  </div>
+</div>
+<app-form-control-validate [control]="control" [customError]="customError"
+  [name]="errorLabel" [submitted]="submitted">
+</app-form-control-validate>

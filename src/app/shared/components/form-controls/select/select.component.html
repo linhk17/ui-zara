@@ -1,0 +1,16 @@
+<select *ngIf="options"
+        class="form-control {{ className }}"
+        [class.is-invalid]="control.invalid && (control.touched || submitted)"
+        [name]="name"
+        [formControl]="control"
+        [attr.disabled]="isDisabled ? true : null">
+    <option *ngFor="let key of objectKeys(options)" [value]="key">
+        {{ options[key] }}
+    </option>
+</select>
+<app-form-control-validate
+        [control]="control"
+        [customError]="customError"
+        [name]="errorLabel"
+        [submitted]="submitted"
+></app-form-control-validate>

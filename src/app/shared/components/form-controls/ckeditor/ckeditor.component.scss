@@ -1,0 +1,25 @@
+::ng-deep {
+  :root {
+    --ck-color-base-foreground: #ffffff;
+    --ck-border-radius: 0.375rem;
+    --ck-color-base-border: #ccdfea;
+    --ck-color-focus-border: #ccdfea;
+    --ck-border-width: 2px;
+    --ck-focus-ring: solid var(--ck-border-width) var(--ck-color-focus-border);
+  }
+  .ck.ck-toolbar,
+  .ck.ck-editor__main > .ck-editor__editable {
+    border-width: var(--ck-border-width) !important;
+  }
+  .ck.ck-editor__top .ck-sticky-panel .ck-toolbar {
+    border-bottom-width: 0 !important;
+  }
+  .ck.ck-editor__editable {
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &:not(.ck-editor__nested-editable).ck-focused {
+      border-color: #9ca5dd;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(64, 81, 186, 0.25);
+    }
+  }
+}

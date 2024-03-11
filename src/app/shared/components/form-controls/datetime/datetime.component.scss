@@ -1,0 +1,23 @@
+@import "~@danielmoncada/angular-datetime-picker/assets/style/picker.min.css";
+@import "scss/soft-ui-dashboard/custom/variables";
+.icon-trigger{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.icon-trigger-clear{
+  font-size: 22px;
+  line-height: 20px;
+  right: 33px;
+  cursor: pointer;
+  color: #999;
+  z-index: 10;
+  &:hover{
+    color: #e71313 !important;
+  }
+}
+
+.form-control-datetime.is-invalid{
+  background-image: none;
+}

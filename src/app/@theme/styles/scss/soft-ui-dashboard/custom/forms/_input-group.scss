@@ -1,0 +1,30 @@
+.input-group {
+  &:focus-within {
+    box-shadow: $input-focus-box-shadow;
+
+    .input-group-text {
+      border-right: 0;
+      border-color: $input-focus-border-color;
+    }
+  }
+
+  .input-group-text {
+    padding-right: $input-group-addon-padding-right;
+  }
+
+  & > :not(:first-child):not(.dropdown-menu) {
+    margin-left: 0;
+  }
+
+  .form-control {
+    &:focus {
+      border-left: 0 !important;
+      box-shadow: none;
+      color: $input-focus-color;
+      border-color: $input-focus-border-color;
+    }
+  }
+}
+.form-group {
+  margin-bottom: 0.75rem;
+}

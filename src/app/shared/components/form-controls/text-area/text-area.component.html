@@ -1,0 +1,16 @@
+<textarea
+  class="form-control {{ className }}"
+  [class.is-invalid]="control.invalid && (control.touched || submitted)"
+  [name]="name"
+  [formControl]="control"
+  [rows]="rows || 3"
+  [placeholder]="placeHolder"
+  [attr.disabled]="isDisabled ? true : null"
+></textarea>
+
+<app-form-control-validate
+  [control]="control"
+  [customError]="customError"
+  [name]="errorLabel"
+  [submitted]="submitted"
+></app-form-control-validate>
