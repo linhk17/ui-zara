@@ -1,10 +1,12 @@
 // Cards
 
 // scss-docs-start card-variables
-$card-spacer-y:                     $spacer !default;
-$card-spacer-x:                     $spacer !default;
+$card-spacer-y:                     0 !default;
+$card-spacer-x:                     0 !default;
 $card-title-spacer-y:               $spacer * .5 !default;
-$card-border-radius:                .75rem !default;
-$card-cap-padding-y:                $card-spacer-y * .5 !default;
-$card-cap-padding-x:                $card-spacer-x !default;
+$card-border-radius:                0 !default;
+$card-cap-padding-y:                0 !default;
+$card-cap-padding-x:                0 !default;
+$card-body-padding: 18px 10px 0 10px !default;
+$card-box-shadow: none !default;
 // scss-docs-end card-variables

@@ -9,4 +9,8 @@ export class FooterComponent {
 	date = new Date();
 
 	constructor() { }
+
+	onSrollTop(){
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
 }

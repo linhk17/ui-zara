@@ -1,40 +1,33 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { User } from '@interfaces/user.interface';
-import { BsModalService } from 'ngx-bootstrap/modal';
-import { ChangePasswordComponent } from './change-password/change-password.component';
-import { AuthService } from '@services/auth.service';
+import { Component, EventEmitter, HostListener, Output, ViewEncapsulation } from '@angular/core';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 @Component({
-	selector: 'app-navbar',
-	templateUrl: './navbar.component.html',
-	styleUrls: ['./navbar.component.scss']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class NavbarComponent {
-	date = new Date();
-	user: User = {
-		firstName: 'Jade',
-		lastName: 'P',
-		avatar: {
-      url: './assets/images/face-5.jpg'
-		}
-	};
-	@Output() byToggle: EventEmitter<boolean> = new EventEmitter<boolean>();
+  slidesPerView: number = 7;
+  screenWidth!: number;
+  isSlider: boolean = false;
+	constructor() { }
+  
+  @HostListener('window:resize')
+  getScreenWidth(){
+    this.screenWidth = window.innerWidth;
+    
+    if(this.screenWidth < 586){
+      this.isSlider = true;
+      this.slidesPerView = 2;
+    }
 
-	constructor(
-		private _modalService: BsModalService,
-		private _authService: AuthService
-	) { }
+    if(this.screenWidth >= 586 && this.screenWidth <= 768){
+      this.isSlider = true;
+      this.slidesPerView = 3;
+    }
 
-	toggleSidebar() {
-		this.byToggle.emit(true);
-	}
-  openModal() {
-    this._modalService.show(ChangePasswordComponent, {
-      initialState: {},
-      class: 'modal-dialog-centered',
-    });
   }
-	logout(){
-		this._authService.logout()
-}
 }

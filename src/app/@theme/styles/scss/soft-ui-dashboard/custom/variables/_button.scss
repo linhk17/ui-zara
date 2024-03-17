@@ -2,60 +2,71 @@
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
-$btn-padding-y: 19px !default;
-$btn-padding-x: 26px !default;
-$btn-font-family: null !default;
-$btn-font-size: 18px !default;
-$btn-line-height: 33.98px !default;
-$btn-letter-spacing: -0.387px !default; // Set to `nowrap` to prevent text wrapping
+$btn-padding-y: 26px !default;
+$btn-padding-x: 19px !default;
+$btn-font-family: $font-family-base !default;
+$btn-font-size: 29px !default;
+$btn-line-height: 34px !default;
 $btn-border-width: 1px !default;
 $btn-font-weight: 400 !default;
 
-$btn-padding-y-sm: 0.375rem !default;
-$btn-padding-x-sm: 1.5rem !default;
-$btn-font-size-sm: $btn-font-size !default;
-$btn-line-height-sm: 21.79px !default;
+$btn-padding-y-sm: 15px !default;
+$btn-padding-x-sm: 5px !default;
+$btn-font-size-sm: 16px !default;
+$btn-line-height-sm: 22px !default;
 
-$btn-padding-y-lg: 19px !default;
-$btn-padding-x-lg: 26px !default;
+$btn-padding-y-lg: 26px !default;
+$btn-padding-x-lg: 19px !default;
 $btn-font-size-lg: $btn-font-size !default;
 $btn-line-height-lg: $btn-line-height !default;
 
 $btn-outline-bottom-padding-y: 10px !default;
 $btn-outline-bottom-padding-x: 16px !default;
 $btn-outline-bottom-border-bottom: 2px !default;
-$btn-outline-bottom-font-weight: $btn-font-weight;
+$btn-outline-bottom-font-weight: $btn-font-weight !default;
+$btn-outline-bottom-letter-spacing: 0.253px !default;
 
-$btn-none-outline-padding-y: 10px !default;
-$btn-outline-bottom-padding-x: 16px !default;
-$btn-outline-bottom-border-bottom: 2px !default;
+$btn-none-outline-padding-y: 16px !default;
+$btn-none-outline-padding-x: 10px !default;
+$btn-none-outline-font-size: 18px !default;
+$btn-none-outline-line-height: 25px !default;
+$btn-none-outline-icon-width: 25px !default;
+$btn-none-outline-icon-height: 25px !default;
+$btn-none-outline-letter-spacing: 0.12px !default;
 
+$btn-icon-padding-x: 26px !default;
+$btn-icon-padding-y: 19px !default;
+$btn-icon-font-size: 16px !default;
+$btn-icon-icon-width: 30px !default;
+$btn-icon-icon-height: 30px !default;
 
-
-// $btn-font-weight: 400 !default;
-
-// $btn-active-opacity: 0.8535 !default;
-// $btn-active-box-shadow: $btn-box-shadow !default;
-// $btn-active-hover-transform: scale(1) !default;
-
-// $btn-hover-opacity: 1 !default;
-// $btn-hover-box-shadow: $btn-box-shadow !default;
-// $btn-hover-transform: scale(1.04) !default;
-
-// $btn-outline-transform: scale(1.06) !default;
-
-// $btn-transition: all 0.15s ease-in !default;
-
-// Allows for customizing button radius independently from global border radius
-// $btn-border-radius: 0.5rem !default;
-// $btn-border-radius-lg: 0.5rem !default;
-// $btn-border-radius-sm: 0.5rem !default;
-
-$btn-icon-padding-x: 19px !default;
-$btn-icon-padding-y: 26px !default;
-$btn-icon-font-size: $btn-font-size !default;
+$btn-icon-sm-padding-x: 15px !default;
+$btn-icon-sm-padding-y: 5px !default;
+$btn-icon-sm-letter-spacing: 0.378px !default;
+$btn-icon-sm-icon-width: 20px !default;
+$btn-icon-sm-icon-height: 20px !default;
 // $btn-icon-transform: scale(1.1) !default;
 
+$btn-box-shadow: none !default;
+$btn-active-opacity: 0.8535 !default;
+$btn-active-box-shadow: $btn-box-shadow !default;
+$btn-active-hover-transform: scale(1) !default;
+
+$btn-hover-opacity: 1 !default;
+$btn-hover-box-shadow: $btn-box-shadow !default;
+$btn-hover-transform: scale(1.04) !default;
+
+$btn-outline-transform: scale(1.06) !default;
+
+$btn-transition: all 0.15s ease-in !default;
+
+$btn-ribbon-padding-x: 12px !default;
+$btn-ribbon-padding-y: 4px !default;
+$btn-ribbon-font-size: 12px !default;
+$btn-ribbon-line-height: 16.34px !default;
+$btn-ribbon-font-weight: 600 !default;
+$btn-ribbon-font-family: $font-family-open-sans !default;
+$btn-ribbon-letter-spacing: 0.2px !default;
 
 // we've overwritten the default Bootstrap function
 // for dynamically adding font color since the colors
@@ -67,7 +78,7 @@ $btn-info-font-color: $white !default;
 $btn-success-font-color: $white !default;
 $btn-warning-font-color: $white !default;
 $btn-dark-font-color: $white !default;
-$btn-light-font-color: $primary !default;
+$btn-light-font-color: $white !default;
 
 $btn-font-colors: () !default;
 

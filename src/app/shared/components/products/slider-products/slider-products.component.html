@@ -1,0 +1,10 @@
+<swiper
+      [slidesPerView]="slidesPerView"
+      [spaceBetween]="50"
+      [navigation]="true"
+      [pagination]="false"
+    >
+      <ng-template *ngFor="let product of products" swiperSlide>
+        <app-card-product [product]="product"></app-card-product>
+      </ng-template>
+</swiper>

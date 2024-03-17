@@ -11,8 +11,6 @@ import { Subscription, iif } from 'rxjs';
 	styleUrls: ['./base.component.scss']
 })
 export class BaseComponent implements OnInit, OnDestroy {
-	private currentUser!: User;
-
 	subscriber = new Subscription();
 	isOpenSidebar: boolean = DEFAULT_SIDEBAR_STATE;
 	isSmallScreen: boolean = false;

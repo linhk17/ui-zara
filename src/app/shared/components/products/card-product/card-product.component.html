@@ -1,0 +1,50 @@
+<div class="card card-product position-relative">
+  <div class="position-relative">
+    <div class="ribbon-hot" *ngIf="product.isHot">
+      <app-button className="btn-ribbon btn-primary">hot</app-button>
+    </div>
+    <div class="ribbon-sale" *ngIf="product.isSale">
+      <app-button className="btn-ribbon btn-dark">sale</app-button>
+    </div>
+    <img class="card-img-top" [src]="'assets/images/banner/' + product.image" />
+    <div class="access-product bg-black w-100">
+      <div class="d-flex access-product-items align-items-center justify-content-between">
+        <div class="d-flex access-product-items-left">
+          <app-button className="btn-none-outline btn-icon-sm btn-outline-white mb-0"><i
+              class="fa-regular fa-heart text-white icon-access"></i></app-button>
+          <app-button className="btn-none-outline btn-icon-sm btn-outline-white mb-0">
+            <i class="fa-solid fa-magnifying-glass icon-search text-white icon-access"></i>
+          </app-button>
+        </div>
+        <app-button className="btn-none-outline btn-icon-sm btn-outline-white mb-0" [classNameIcon]="'me-2'"
+          [icon]="'shopping-cart-md-light'">Shop Now</app-button>
+
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="div">
+      <h6 class="name-product text-dark">
+        {{product.name}}
+      </h6>
+      <div class="d-flex justify-content-between mt-4">
+        <span class="span-3 text-dark-50">
+          {{product.type}}
+        </span>
+        <div class="d-flex justify-content-between align-items-center gap-3" *ngIf="product.isSale; else noSale">
+          <span class="span-2 text-dark-50">
+            {{product.price | currencyPipe}}
+          </span>
+          <span class="span text-primary">
+            {{product.priceAfter! | currencyPipe}}
+          </span>
+        </div>
+        <ng-template #noSale>
+          <span class="span">
+            {{product.price | currencyPipe}}
+          </span>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

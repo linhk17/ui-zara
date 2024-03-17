@@ -15,10 +15,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxGpAutocompleteModule } from '@angular-magic/ngx-gp-autocomplete';
 import { environment } from '@env/environment';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,95 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/variables";
+@import "scss/soft-ui-dashboard/custom/variables";
+
+.footer-content {
+  padding-top: 140px;
+  padding-bottom: 90px;
+
+  .col-about-brand {
+    gap: 30px;
+    padding-right: 44px;
+
+    .logo {
+      height: 34px;
+
+      img {
+        width: 180px;
+        height: 100%;
+      }
+    }
+
+    .list-icon {
+      gap: 36px;
+
+      .icon {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .title {
+    margin-bottom: 22px;
+  }
+
+  .row-info {
+    gap: 110px;
+  }
+}
+
+.text-a2{
+  width: fit-content;
+}
+
+.text-a2::after {
+  content: '';
+  border-top: 3px solid $primary;
+  width: 0;
+  position: absolute;
+  display: block;
+  transform: rotateY(90deg);
+  transition:transform 0.25s linear;
+}
+
+.text-a2:hover {
+  cursor: pointer;
+  transform: scale(1);
+}
+
+.text-a2:hover::after {
+  width: 100%;
+  transform: rotate(0deg);
+}
+
+.footer-end {
+  padding: 15px 0;
+
+  .list-paypal {
+    height: 24px;
+
+    img {
+      height: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .row-info{
+    gap: 30px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .col-about-brand{
+    padding-right: 0 !important;
+  }
+}

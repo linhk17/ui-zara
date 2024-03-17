@@ -3,8 +3,9 @@
         class="btn {{ className }} d-flex align-items-center"
         (click)="handlerClick($event)"
         name="button">
-    <img *ngIf="icon" [class.me-2]="!isIconOnly" [src]="'assets/images/icons/'+ icon +'.svg'"/>
+    <img *ngIf="icon && (typePositionIcon == 'prefix')" class="{{classNameIcon}} icon" [src]="'assets/images/icons/'+ icon +'.svg'"/>
     <ng-content></ng-content>
+    <img *ngIf="icon && (typePositionIcon == 'suffix')" class="{{classNameIcon}} icon" [src]="'assets/images/icons/'+ icon +'.svg'"/>
     <div *ngIf="isLoading" class="spinner-border spinner-border-sm ms-1" role="status">
         <span class="visually-hidden">Loading...</span>
     </div>

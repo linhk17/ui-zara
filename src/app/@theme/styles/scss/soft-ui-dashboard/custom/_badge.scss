@@ -1,4 +1,4 @@
 .badge{
-  width: fit-content;
-  line-height: 18px;
+  line-height: $badge-line-height;
+  padding: $badge-padding-y $badge-padding-x;
 }

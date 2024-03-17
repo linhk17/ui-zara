@@ -26,9 +26,79 @@ $dark-25: #00000040;
 $dark-10: #0000001A;
 $dark-5: #0000000D;
 
+$secondary: #8392ab;
+$success: #82d616;
+$info: #3A7EDE;
+$warning: #f5cc39;
+$danger: #ea0606;
+$dark: #252f40;
+$light: #e9ecef;
+$white: #ffffff;
+$light-dark: #67748E;
+$light-gray: #f0f0f0;
+
+
+$gray-100: #ffffff;
+$gray-200: #fafafa;
+$gray-200: #fafafa;
+$gray-300: #f5f5f5;
+$gray-400: #f0f0f0;
+$gray-500: #d9d9d9;
+$gray-600: #bfbfbf;
+$gray-700: #8c8c8c;
+$gray-800: #595959;
+$gray-900: #434343;
+$gray-10: #262626;
+$gray-11: #1f1f1f;
+$gray-12: #141414;
+$body-color: $dark;
+
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900,
+  "10": $gray-10,
+  "11": $gray-11,
+  "12": $gray-12,
+);
+
 $theme-colors: (
   "primary": $primary,
+  "primary-75": $primary-75,
+  "primary-50": $primary-50,
+  "primary-25": $primary-25,
+  "primary-10": $primary-10,
+  "primary-5": $primary-5,
   "black": $black,
+  "black-75": $black-75,
+  "black-50": $black-50,
+  "black-25": $black-25,
+  "black-10": $black-10,
+  "black-5": $black-5,
   "white": $white,
-  "dark": $dark
+  "white-75": $white-75,
+  "white-50": $white-50,
+  "white-25": $white-25,
+  "white-10": $white-10,
+  "white-5": $white-5,
+  "dark": $dark,
+  "dark-75": $dark-75,
+  "dark-50": $dark-50,
+  "dark-25": $dark-25,
+  "dark-10": $dark-10,
+  "dark-5": $dark-5,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "light-dark": $light-dark,
+  "light-gray": $light-gray
 );

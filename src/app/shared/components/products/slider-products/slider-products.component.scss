@@ -1,0 +1,13 @@
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+@import "scss/soft-ui-dashboard/custom/variables";
+
+.swiper-button-prev, .swiper-button-next{
+  color: $black-50;
+  font-weight: 900;
+  
+  &::after{
+    font-size: 32px;
+  }
+}

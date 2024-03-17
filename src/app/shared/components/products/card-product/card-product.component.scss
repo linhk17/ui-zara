@@ -1,0 +1,35 @@
+.card-product {
+
+  .ribbon-hot, .ribbon-sale{
+    position: absolute;
+    top: 22px;
+    left: 0;
+  }
+  .access-product {
+    position: absolute;
+    bottom: 0;
+    padding: 15px 14px;
+    opacity: 0;
+    transition: .75s ease;
+
+    .access-product-items {
+      .icon-access {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        width: 25px;
+        height: 25px;
+      }
+
+      .access-product-items-left {
+        gap: 21px;
+      }
+    }
+  }
+
+  &:hover .access-product {
+    opacity: 1;
+  }
+
+}

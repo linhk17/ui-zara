@@ -13,6 +13,8 @@ export class ButtonComponent {
 	@Input() className: string = '';
 	@Input() icon: string = '';
 	@Input() isIconOnly: boolean = false;
+	@Input() typePositionIcon: 'prefix' | 'suffix' = 'prefix';
+	@Input() classNameIcon: string = '';
 	@Output() byClick: EventEmitter<Event> = new EventEmitter();
 
 	constructor() { }

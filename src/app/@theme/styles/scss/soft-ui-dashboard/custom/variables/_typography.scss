@@ -21,17 +21,19 @@ $headings-color: $gray-12;
 
 $font-size-base: 1rem;
 $line-height-base: 1;
+$font-weight-base: 400;
 
 $link-color: $primary;
 
-$h1-font-size: $font-size-base * 3;
-$h2-font-size: $font-size-base * 2.25;
-$h3-font-size: $font-size-base * 1.875;
-$h4-font-size: $font-size-base * 1.5;
-$h5-font-size: $font-size-base * 1.25;
+$body-font-size: $font-size-base * 4.625 !default;
+$h1-font-size: 4.188rem !default;
+$h2-font-size: $font-size-base * 3.125 !default;
+$h3-font-size: $font-size-base * 2.313 !default;
+$h4-font-size: $font-size-base * 1.75 !default;
+$h5-font-size: $font-size-base * 1.313 !default;
 $h6-font-size: $font-size-base;
-$font-size-sm: $font-size-base * 0.875;
-$font-size-xs: $font-size-base * 0.75;
+$font-size-sm: $font-size-base;
+$font-size-xs: $font-size-base * 0.875 !default;
 
 $font-weight-medium: 500;
 $font-weight-semibold: 600;

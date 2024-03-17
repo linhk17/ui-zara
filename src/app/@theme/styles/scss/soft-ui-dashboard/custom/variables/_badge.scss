@@ -1,5 +1,33 @@
-$badge-font-size:                   .75rem;
-$badge-color:                       $white;
-$badge-padding-y:                   .188rem;
-$badge-padding-x:                   .75rem;
-$badge-border-radius:               .5rem;
+$badge-font-size:                   .75rem !default;
+$badge-color:                       $white !default;
+$badge-padding-y:                   4px !default;
+$badge-padding-x:                   12px !default;
+$badge-line-height: 16.34px !default;
+
+// we've overwritten the default Bootstrap function
+// for dynamically adding font color since the colors
+// added by that function were not correctly set
+$badge-primary-font-color: $white !default;
+$badge-secondary-font-color: $white !default;
+$badge-danger-font-color: $white !default;
+$badge-info-font-color: $white !default;
+$badge-success-font-color: $white !default;
+$badge-warning-font-color: $white !default;
+$badge-dark-font-color: $white !default;
+$badge-light-font-color: $white !default;
+
+$badge-font-colors: () !default;
+
+$badge-font-colors: map-merge(
+  (
+    "primary": $badge-primary-font-color,
+    "secondary": $badge-secondary-font-color,
+    "danger": $badge-danger-font-color,
+    "info": $badge-info-font-color,
+    "success": $badge-success-font-color,
+    "warning": $badge-warning-font-color,
+    "dark": $badge-dark-font-color,
+    "light": $badge-light-font-color,
+  ),
+  $btn-font-colors
+);

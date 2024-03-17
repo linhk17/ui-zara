@@ -1,0 +1,95 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/variables";
+@import "scss/soft-ui-dashboard/custom/variables";
+
+
+.header {
+  padding-top: 31px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #E3E3E3;
+
+  .search-wrapper {
+    width: 100%;
+
+    .icon-search {
+      display: flex;
+      align-items: center;
+      width: 25px;
+      height: 25px;
+      font-size: 20px;
+      opacity: 1;
+      transition: .5s ease-in-out;
+    }
+
+    .icon-search:hover 
+     {
+      .input-search {
+        width: 10px;
+        // height: 100px;
+      }
+     }
+
+    // .input-search {
+    //   width: 100px;
+    //   transition: all 0.4s linear;
+
+    // }
+  }
+
+
+  .logo {
+    width: 180px;
+    height: 34px;
+  }
+
+  .list-action {
+    gap: 22px;
+
+  }
+
+  .search-wrapper {
+    border-radius: 30px;
+    padding: 8px;
+    background-color: transparent;
+  }
+
+  .search-wrapper:hover{
+    background-color: $white;
+    width: 100%;
+  }
+
+  .search-wrapper:hover > .search-input {
+    width: 90%;
+    padding: 2px 10px 0px 10px;
+  }
+
+  .search-input {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    font-size: 16px;
+    width: 0;
+    transition: all 0.4s linear;
+  }
+
+  .search-input::-webkit-input-placeholder {
+    color: $black-25;
+  }
+
+  .search-btn {
+    cursor: pointer;
+    transition: all 0.4 linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .search-wrapper{
+    margin: 15px 0;
+  }
+}

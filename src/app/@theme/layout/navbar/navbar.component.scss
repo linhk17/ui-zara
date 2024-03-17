@@ -1,25 +1,79 @@
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/variables";
+// .navbar{
+//   margin-top: 22px;
+
+//   .navbar-nav{
+//     display: flex;
+//     justify-content: space-between;
+//     gap: 10px;
+//     flex-wrap: wrap;
+//     .nav-link{
+//       font-weight: 400;
+//       font-size: 16px;
+//       line-height: 24px;
+//     }
+//   }
+// }
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
 @import "scss/soft-ui-dashboard/custom/variables";
 
-.badge-notice {
-  position: absolute;
-  top: -2px;
-  right: -5px;
-  min-width: 12px;
-  min-height: 12px;
-  max-width: 20px;
-  max-height: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: $font-family-open-sans;
-  font-size: 9px;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: -0.249px;
-  background-color: #f5222d;
-  color: $white;
+.navbar-custom {
+
+  .list-type{
+    margin-top: 30px;
+    row-gap: 20px;
+    column-gap: 57.67px;
+    justify-content: center;
+
+    .text-a::after {
+      content: '';
+      border-top: 3px solid $primary;
+      width: 0;
+      position: absolute;
+      display: block;
+      transform: rotateY(90deg);
+      transition:transform 0.25s linear;
+    }
+    .text-a:hover {
+      cursor: pointer;
+      transform: scale(1);
+    }
+    .text-a:hover::after {
+      width: 100%;
+      transform: rotate(0deg);
+    }
+  }
+  .swiper{
+    height: 80px;
+
+    .swiper-pagination{
+        top: 60px;
+    }
+  }
+  .swiper-wrapper {
+    margin-top: 30px;
+    .swiper-slide {
+      width: fit-content !important;
+
+      .text-a::after {
+        content: '';
+        border-top: 3px solid $primary;
+        width: 0;
+        position: absolute;
+        display: block;
+        transform: rotateY(90deg);
+        transition:transform 0.25s linear;
+      }
+      .text-a:hover {
+        cursor: pointer;
+        transform: scale(1);
+      }
+      .text-a:hover::after {
+        width: 100%;
+        transform: rotate(0deg);
+      }
+    }
+  }
+  
 }

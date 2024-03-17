@@ -1,27 +1,28 @@
 // Forms
 // scss-docs-start form-input-variables
-$input-padding-y: 0.625rem !default;
-$input-padding-x: 0.75rem !default;
+$input-padding-y: 0.813rem !default;
+$input-padding-x: 0.938rem !default;
 $input-font-style: normal !default;
 $input-letter-spacing: -0.387 !default;
-$input-line-height: 18.858px !default;
+$input-line-height: 20px !default;
+$input-font-weight: 600 !default;
+$input-color: $dark-50 !default;
 
 $input-bg: $white !default;
 $input-disabled-bg: $gray-200 !default;
 
-$input-color: #252f40 !default;
-$input-border-color: #d2d6da !default;
-$input-border-width: 1px !default;
+$input-border-width: 0 !default;
+$input-border-bottom: 2px solid $dark !default;
 
-$input-border-radius: 0.5rem !default;
+$input-border-radius: 0 !default;
 $input-border-radius-sm: $input-border-radius !default;
 $input-border-radius-lg: $input-border-radius !default;
 
 $input-focus-bg: $input-bg !default;
-$input-focus-border-color: $primary !default;
+$input-focus-border-color: none !default;
 $input-focus-color: $input-color !default;
 $input-focus-width: 2px !default;
-$input-focus-box-shadow: 0px 0px 0px 2px rgba(74, 161, 154, 0.5) !default;
+$input-focus-box-shadow: none !default;
 
 $input-placeholder-color: $gray-700 !default;
 $input-plaintext-color: $dark !default;

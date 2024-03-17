@@ -10,10 +10,11 @@ import { BreadcrumbsModule } from '@shared/components/breadcrumbs/breadcrumbs.mo
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { FormControlsModule } from '@shared/components/form-controls/form-controls.module';
-import { ChangePasswordComponent } from './layout/navbar/change-password/change-password.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IsGrantedModule } from '@shared/directives/is-granted/is-granted.module';
 import { DatetimeModule } from '@shared/pipes/datetime/datetime.module';
+import { HeaderComponent } from './layout/header/header.component';
+import { SwiperModule } from 'swiper/angular';
 
 
 
@@ -23,7 +24,7 @@ import { DatetimeModule } from '@shared/pipes/datetime/datetime.module';
 		NavbarComponent,
 		SidebarComponent,
 		FooterComponent,
-		ChangePasswordComponent
+    HeaderComponent
 	],
 	imports: [
 		CommonModule,
@@ -36,7 +37,8 @@ import { DatetimeModule } from '@shared/pipes/datetime/datetime.module';
 		ReactiveFormsModule,
 		FormControlsModule,
 		IsGrantedModule,
-		DatetimeModule
+		DatetimeModule,
+    SwiperModule
 	]
 })
 export class ThemeModule { }
